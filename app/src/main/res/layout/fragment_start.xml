@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20pt"
+        android:text="Регистрация"
+        android:textSize="15pt" />
+
+    <Button
+        android:id="@+id/IamStudentButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Я ученик"
+        android:layout_margin="10pt"
+        android:textSize="12pt" />
+
+    <Button
+        android:id="@+id/IamTutorButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Я репетитор"
+        android:layout_margin="10pt"
+        android:textSize="12pt"/>
+
+
+</LinearLayout>

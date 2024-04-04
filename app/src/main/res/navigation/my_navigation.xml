@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_navigation"
+    app:startDestination="@id/student1Fragment">
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.example.app7.UI.StartFragment"
+        android:label="fragment_start"
+        tools:layout="@layout/fragment_start" >
+        <action
+            android:id="@+id/action_startFragment_to_student1Fragment"
+            app:destination="@id/student1Fragment" />
+        <action
+            android:id="@+id/action_startFragment_to_tutor1Fragment"
+            app:destination="@id/tutor1Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/student1Fragment"
+        android:name="com.example.app7.UI.Student1Fragment"
+        android:label="fragment_student1"
+        tools:layout="@layout/fragment_student1" >
+        <action
+            android:id="@+id/action_student1Fragment_to_student2Fragment"
+            app:destination="@id/student2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/student2Fragment"
+        android:name="com.example.app7.UI.Student2Fragment"
+        android:label="fragment_student2"
+        tools:layout="@layout/fragment_student2" />
+    <fragment
+        android:id="@+id/tutor1Fragment"
+        android:name="com.example.app7.UI.Tutor1Fragment"
+        android:label="fragment_tutor1"
+        tools:layout="@layout/fragment_tutor1" >
+        <action
+            android:id="@+id/action_tutor1Fragment_to_tutor2Fragment"
+            app:destination="@id/tutor2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tutor2Fragment"
+        android:name="com.example.app7.UI.Tutor2Fragment"
+        android:label="fragment_tutor2"
+        tools:layout="@layout/fragment_tutor2" />
+</navigation>
