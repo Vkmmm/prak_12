@@ -6,10 +6,13 @@ import androidx.navigation.fragment.NavHostFragment;
 
 import android.os.Bundle;
 
+import com.example.app7.PlaceholderAPI;
 import com.example.app7.R;
+import com.example.app7.RetrofitFactory;
+
+import retrofit2.Retrofit;
 
 public class MainActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

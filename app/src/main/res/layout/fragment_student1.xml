@@ -12,30 +12,52 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:text="Регистрация ученика"
         android:textSize="20pt"/>
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/editT_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="text"
-        android:layout_margin="30pt"
+        android:layout_margin="15pt"
         android:hint="Введите имя" />
     <EditText
-        android:id="@+id/editTextText2"
+        android:id="@+id/edit_group"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="text"
-        android:layout_margin="30pt"
-        android:hint="Город" />
+        android:layout_margin="15pt"
+        android:hint="Группа" />
+    <EditText
+        android:id="@+id/edit_ID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:layout_marginLeft="15pt"
+        android:layout_marginRight="15pt"
+        android:layout_marginVertical="10pt"
+        android:hint="Id" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button_upload"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Зарегистироваться"
-        android:layout_margin="30pt"/>
+        android:text="Загрузить" />
+
+    <Button
+        android:id="@+id/button_get"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Получить" />
+
+    <Button
+        android:id="@+id/button_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Удалить" />
+
+
 </LinearLayout>

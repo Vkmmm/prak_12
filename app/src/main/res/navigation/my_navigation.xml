@@ -29,7 +29,11 @@
         android:id="@+id/student2Fragment"
         android:name="com.example.app7.UI.Student2Fragment"
         android:label="fragment_student2"
-        tools:layout="@layout/fragment_student2" />
+        tools:layout="@layout/fragment_student2" >
+        <action
+            android:id="@+id/action_student2Fragment_to_student1Fragment"
+            app:destination="@id/student1Fragment" />
+    </fragment>
     <fragment
         android:id="@+id/tutor1Fragment"
         android:name="com.example.app7.UI.Tutor1Fragment"

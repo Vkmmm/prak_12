@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
+import androidx.transition.TransitionInflater;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,7 +21,10 @@ public class Tutor1Fragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        info = new InformationRepository();
+        androidx.transition.TransitionInflater inflater =
+                TransitionInflater.from(requireContext());
+        setEnterTransition(inflater.inflateTransition(R.transition.slide_right));
+        setAllowEnterTransitionOverlap(true);
     }
 
     @Override
@@ -30,18 +34,23 @@ public class Tutor1Fragment extends Fragment {
         Button button = view.findViewById(R.id.button);
         EditText editText1 = view.findViewById(R.id.editTextText);
         EditText editText2 = view.findViewById(R.id.editTextText2);
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String Name = editText1.getText().toString();
-                String Town = editText2.getText().toString();
-                info.setName(Name);
-                info.setTown(Town);
+               // String Name = editText1.getText().toString();
+               // String Town = editText2.getText().toString();
+               // info.setName(Name);
+               // info.setTown(Town);
                 Bundle bundle = new Bundle();
-                bundle.putSerializable("Info", info);
-                Navigation.findNavController(view).navigate(R.id.action_tutor1Fragment_to_tutor2Fragment, bundle);
+              //  bundle.putSerializable("Info", info);
+                requireActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.nav_host_fragment, new Tutor2Fragment() )
+                        .addToBackStack(null)
+                        .commit();
             }
         });
+
         return view;
     }
 }
